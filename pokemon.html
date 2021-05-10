@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .choose{
+            width: 80%;
+            background-color: wheat;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .choose h1{
+            margin-top: 50px;
+        }
+
+        .choose__menu{
+            width: 100%;
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .choose__item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .choose__item img{
+            width: 50px;
+            height: 50px;
+        }
+
+        .choose__item img:hover{
+            transform: rotate(10deg);
+        }
+
+        .choose__item p{
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .choose .pokemon{
+            margin-top: 50px;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(245, 227, 195);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .choose .pokemon img{
+            width: 200px;
+            height: 200px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="choose">
+        <h1>Escolha seu tipo:</h1>
+        <ul class="choose__menu">
+            <li class="choose__item choose__item--cyndaquil" onclick="cyndaquil()"><img src="img/pokeball.png" alt=""><p>Fogo</p></li>
+            <li class="choose__item choose__item--totodile" onclick="totodile()"><img src="img/pokeball.png" alt=""><p>Água</p></li>
+            <li class="choose__item choose__item--chikorita" onclick="chikorita()"><img src="img/pokeball.png" alt=""><p>Planta</p></li>
+        </ul>
+        <div class="pokemon">
+            
+        </div>
+    </div>
+    
+    <script>
+
+        function cyndaquil(){
+            var space = window.document.querySelector(".pokemon");
+            space.innerHTML = `<img src="img/cyndaquil.png" alt="">`;
+            space.style.background = 'Orange';
+        }
+
+        function totodile(){
+            var space = window.document.querySelector(".pokemon");
+            space.innerHTML = `<img src="img/totodile.png" alt="">`;
+            space.style.background = 'Lightblue';
+            var img = window.document.querySelector(".choose .pokemon img")
+            img.style.width = '150px';
+            img.style.height = '150px';
+        }
+
+        function chikorita(){
+            var space = window.document.querySelector(".pokemon");
+            space.innerHTML = `<img src="img/chikorita.png" alt="">`;
+            space.style.background = 'Lightgreen';
+            var img = window.document.querySelector(".choose .pokemon img")
+            img.style.width = '150px';
+            img.style.height = '150px';
+        }
+
+    </script>
+    
+    
+</body>
+</html>
